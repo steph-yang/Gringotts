@@ -66,12 +66,10 @@ https://www.youtube.com/watch?v=Z6n0GYikEkA&ab_channel=StephanieYang
 |-- Supportive_Scripts
     |-- back_end
     |   |-- api.py  (backend python script that scraps data via API)
-    |
     |-- database_construction
     |   |-- prj_price.md
     |   |-- prj_balance.md
     |   |-- prj_usr.md
-    |
     |-- original_data
             |-- price.csv
             |-- balance.csv
