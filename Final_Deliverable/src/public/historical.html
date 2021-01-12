@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html lang="en">
+<head>
+  <title>Gringotts Exchange Center</title>
+  <link type="text/css" rel="stylesheet" href="style/elegant-aero.css" />
+  <link rel="icon" href="image/wizard.png">
+</head>
+<body style='background-image:URL("image/parchment.jpg");background-repeat:no-repeat;padding-bottom: 50px;background-position:center top;-webkit-background-size:100%;-moz-background-size:100%;-o-background-size:100%;background-size: cover;'>
+
+<h1 style="font: 50px Trattatello, fantasy; text-align:center; color:#800000"> Let me know your treasure... </h1>
+
+<p style="margin-bottom:1cm"></p>
+<form action="/hist.html" style="width:800px;margin:0 auto;padding-top=200px;background:#C39C65" method="get" target="results_iframe" class="elegant-aero">
+
+  <div style="margin: auto;">
+    <label>
+      <span>I hold</span>
+        <input type="number" name="quantity" value="1000" style='display: inline; width: 80px;'/>
+    </label>
+    <label>
+      <span>unit of </span>
+    <input type="text" name="coin" value="bitcoin" style='display: inline; width: 80px;'/>
+    </label>
+
+    <label>
+      <span>from</span>
+      <input type="date" name="from_date" value="2020-11-15"/>
+      <span>to</span>
+      <input type="date" name="end_date" value="2020-11-20"/>
+    </label>
+
+    <label>
+      <span>I want </span>
+      <input type="text" name="target" value="litecoin" style='display: inline; width: 80px;'/>
+    </label>
+
+  </div>
+  <div style="text-align: center; padding: 20px;">
+    <label>
+      <input  type="submit" value="Check Exchange Rate">
+    </label>
+  </div>
+
+
+  <div style="text-align: center; padding-bottom: 40px">
+    <label>
+      <span style="font-size: 20px">Check list of all coins at
+      <a href="https://api.coingecko.com/api/v3/coins/list" target="_blank">
+        CoinGecko
+      </a>
+        </span>
+    </label>
+  </div>
+
+
+</form>
+<p style="margin-bottom:2cm"></p>
+
+<iframe onload="resizeIframe(this)" frameBorder="0" name="results_iframe" style="display:block;width:70%;margin-left:auto;margin-right:auto; border-radius: 20px" allowtransparency="true"></iframe>
+<div style="text-align: center;">
+  <img src="image/golden_snitch.png"
+       style="width:100px; outline: 0; padding-top:25px;padding-bottom: 15px ;margin:0px auto; display:block;
+         -webkit-filter: drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black);
+         filter: drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black);"/>
+  <form method="get" action="welcome.html">
+  <button style="background-color: black; color: #EBD4B4; outline: 0;">Back</button>
+  </form>
+</div>
+
+<script type="text/javascript">
+  function resizeIframe(iframe) {
+    iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head>
+  <title>Gringotts Exchange Center</title>
+  <link type="text/css" rel="stylesheet" href="style/elegant-aero.css" />
+  <link rel="icon" href="image/wizard.png">
+</head>
+<body style='background-image:URL("image/gringotts.jpg");padding-bottom: 50px;background-position:center top;background-size: cover;'>
+
+<h1 style="font: 50px Trattatello, fantasy; text-align:center; color:#EBD4B4"> Welcome to Gringotts Digital Currency Exchange Center </h1>
+
+<div style="height: 200px;margin-bottom: 10px;text-align: center;">
+  <div class="boxes" style="background-color: #decdc3;overflow: auto;padding: 5px;height: 450px;vertical-align: top;">
+    <p style="font-family: Trattatello, fantasy; color: black; font-size: 20px"> Historical Data (Batch Layer)</p>
+    <p style="margin: -5px"> This section shows historical exchange price of over five thousand digital coins.
+      By typing in amount of holding coins, target coins and holding period, the system will look up in the
+      database and compute a list of exchange price. </p>
+    <p><b><i>Notice: </i></b></p>
+    <p>1. The database only contains historical data <b>from 2020-11-12 to 2020-11-20</b>, because of the large size of files
+      and instability of API. But more data can be scrapped using api.py and real-time data can be found in the
+      second section.</p>
+    <p>2. Data source and full list of digital currency included can be found here: <a href="https://www.coingecko.com/en/api">CoinGecko</a></p>
+    <form action="historical.html" method="get">
+      <button>Explore Historical Exchange Rate</button>
+    </form>
+  </div>
+
+  <div class="boxes" style="background-color: #c8d5b9;overflow: auto; height: 450px; vertical-align: top; padding: 5px">
+    <p style="font-family: Trattatello, fantasy; color: black; font-size: 20px"> Real Time Search (Speed Layer)</p>
+    <p style="margin: -5px"> This section  returns market price of the selected digital coin
+      on the selected day. Data fetched from API will be first processed in the speed layer and then saved into the batch layer database</p>
+    <p><b><i>Notice: </i></b></p>
+    <p>1. The field of coin does not support multiple input. Please type in one coin for each time.</p>
+    <p>2. Date cannot exceed today. </p>
+
+    <form action="one_day.html" method="get">
+      <button>Search for One Day</button>
+    </form>
+
+
+  </div>
+
+
+  <div class="boxes" style="background-color: #4e89ae;overflow: auto;padding: 5px;height: 450px">
+    <p style="font-family: Trattatello, fantasy; color: black; font-size: 20px"> Client Service</p>
+    <p> This application is an attempt for a bank-like client service application. Clients can either log in account
+        or register for a new account. When logging into the account, the system will return the client's balance and
+        real-time value of the coins he/she holds.
+    </p>
+    <p> For users already accounts, please use the login button below: active user include Harry Potter
+        (account: HarryPotter, pwd: gryffindor) and Luna Lovegood (account: LunaLovegood, pwd: ravenclaw). </p>
+    <form action="login.html" method="get">
+      <button>Check your vault</button>
+    </form>
+    <p>
+      Or you can deposit or withdraw coins:
+    </p>
+    <form action="trade.html" method="get">
+      <button>Trade</button>
+    </form>
+    <p> New clients are welcome as well: </p>
+    <form action="registration.html" method="get">
+      <button>User Registration</button>
+    </form>
+
+  </div>
+
+  <div style="text-align: center; padding-bottom: 50px">
+    <img src="image/golden_snitch.png"
+         style="width:100px; outline: 0; padding-top:25px;padding-bottom: 15px ;margin:0px auto; display:block;
+       -webkit-filter: drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black);
+       filter: drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black);"/>
+    <button onclick="popup()" style="background-color: black; color: #EBD4B4; outline: 0">I solemnly swear I am up to no good</button>
+
+  </div>
+
+</div>
+
+
+<script>
+  function popup() {
+    alert("This web app is developed by Stephanie. She is a super Harry Potter fans and her favorite character is Luna Lovegood :)");
+  }
+</script>
+</body>
+</html>

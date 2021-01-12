@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Result</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/style/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/style/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/style/vendor/animate/animate.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/style/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/style/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/style/css/util.css">
+  <link rel="stylesheet" type="text/css" href="/style/css/main.css">
+<!--===============================================================================================-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+<script>
+        $(document).ready(function(){
+            $('.val').each(function(){
+                if ($(this).text() >= 226896) {
+                    $(this).css('background-color','#f00');
+                }
+            });
+        });
+</script>
+
+</head>
+<body>
+
+      <div class="limiter">
+        <div class="container-table100">
+          <div class="wrap-table100" style="background-color:#cbaf87">
+            <div class="table100 ver5 m-b-110">
+              <div class="table100-head">
+                <table>
+                <thead id="tbHead" class="head"></thead>
+                </table>
+              </div>
+
+              <div class="table100-body js-pscroll">
+                <table>
+                  <tbody id="tbMain"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p hidden id="info">{{ info }}</p>
+    </p>
+
+    <script type="text/javascript">
+        var data =  JSON.parse(document.getElementById("info").innerHTML);
+        window.onload = function(){
+          var thead = document.getElementById('tbHead');
+          var tcol = getDataCol(data);
+          thead.appendChild(tcol);
+
+
+          var element = Object.keys(data[Object.keys(data)[0]]);
+
+          var tbody = document.getElementById('tbMain');
+          for(e of element){
+            var row = getDataRow(e);
+            tbody.appendChild(row);
+         }
+       }
+
+
+       function getDataCol(){
+         var col = document.createElement('tr');
+         col.className = "row100 head";
+         const index = "Medium Currency";
+         var element = Object.keys(data);
+         element = [index].concat(element);
+         for(e of element){
+
+            var v = document.createElement('th');
+            v.className = "cell100";
+            v.innerHTML = e;
+            col.appendChild(v);
+
+         }
+         return col;
+         }
+
+
+       function getDataRow(e){
+         var row = document.createElement('tr');
+         row.className = "row100 body";
+
+        var v = document.createElement('td');
+        v.innerHTML = e.slice(4, e.length).toUpperCase();
+        row.appendChild(v);
+
+          for(d in data){
+            var v = document.createElement('td');
+            v.className = "val";
+            if(data[d][e] !== "NA"){
+                var digit = Number(data[d][e]).toFixed(4).toString();
+            } else {
+                var digit = "NA"
+            }
+            v.innerHTML = digit;
+            row.appendChild(v);
+          }
+
+         return row;
+         }
+
+    </script>
+
+
+</body>
+</html>
