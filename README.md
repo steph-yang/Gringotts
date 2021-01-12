@@ -79,37 +79,44 @@ spark-submit --master local[2] --driver-java-options "-Dlog4j.configuration=file
 ```
 |-- README.md
 |
-|-- final_project.zip
-|   |-- app.js
-|   |-- package.json
-|   |-- public
-|   |   |-- welcome.html
-|   |   |-- historical.html
-|   |   |-- one_day.html
-|   |   |-- login.html
-|   |   |-- trade.html
-|   |   |-- registration.html
-|   |   |-- image
-|   |   |-- style
+|-- Final_Deliverable
+|   |-- appspec.yml
+|   |-- bin
+|   |   |-- after_install.sh
+|   |   |-- application_start.sh
+|   |   |-- application_stop.sh
+|   |   |-- before_install.sh
 |   |
-|-- |-- mustache
-|       |-- error.mustache
-|       |-- historical.mustache
-|       |-- realtime.mustache
-|       |-- login.mustache
-|       |-- back_end
+|   |-- src
+|       |-- app.js
+|       |-- package.json
+|       |-- public
+|       |   |-- welcome.html
+|       |   |-- historical.html
+|       |   |-- one_day.html
+|       |   |-- login.html
+|       |   |-- trade.html
+|       |   |-- registration.html
+|       |   |-- image
+|       |   |-- style 
+|       |-- mustache
+|           |-- error.mustache
+|           |-- historical.mustache
+|           |-- realtime.mustache
+|           |-- login.mustache
 |
-|-- Backend
-|   |-- api.py  (backend python script that scraps data via API)
-|
-|-- Hive_and_data
-    |-- stephyang_prj_price.md
-    |-- stephyang_prj_balance.md
-    |-- stephyang_prj_usr.md
+|-- Supportive_Scripts
+    |-- back_end
+    |   |-- api.py  (backend python script that scraps data via API)
+    |
+    |-- database_construction
+    |   |-- prj_price.md
+    |   |-- prj_balance.md
+    |   |-- prj_usr.md
+    |
     |-- original_data
-        |-- historical.mustache
-    	|-- stephyang_prj_price.csv
-    	|-- balance.csv
-    	|-- user.csv
+            |-- price.csv
+            |-- balance.csv
+            |-- user.csv
 ```
 
