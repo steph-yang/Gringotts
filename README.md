@@ -76,6 +76,7 @@ spark-submit --master local[2] --driver-java-options "-Dlog4j.configuration=file
 
 ## File Structure
 
+```
 |-- README.md
 |
 |-- final_project.zip
@@ -110,6 +111,5 @@ spark-submit --master local[2] --driver-java-options "-Dlog4j.configuration=file
     	|-- stephyang_prj_price.csv
     	|-- balance.csv
     	|-- user.csv
-
-
+```
 
