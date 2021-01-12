@@ -15,16 +15,6 @@ This project has three main parts:
 
 https://www.youtube.com/watch?v=Z6n0GYikEkA&ab_channel=StephanieYang
 
-## Link (expired)
-
-http://ec2-3-15-219-66.us-east-2.compute.amazonaws.com:3233/welcome.html
-
-## Database Name in Hbase (expired)
-
-1. stephyang_prj_price: historical price data for batch and speed layers.
-2. stephyang_prj_usr: user account name and password
-3. stephyang_prj_balance: account balance data
-
 
 ## Pages:
 
@@ -81,8 +71,17 @@ http://ec2-3-15-219-66.us-east-2.compute.amazonaws.com:3233/welcome.html
             |-- balance.csv
             |-- user.csv
 ```
+## Link (expired)
 
-## Kafka Topics & Corresponding Spark Jobs
+http://ec2-3-15-219-66.us-east-2.compute.amazonaws.com:3233/welcome.html
+
+## Database Name in Hbase (expired)
+
+1. stephyang_prj_price: historical price data for batch and speed layers.
+2. stephyang_prj_usr: user account name and password
+3. stephyang_prj_balance: account balance data
+
+## Kafka Topics & Corresponding Spark Jobs (expired)
 
 1. stephyang_coin_price: topic for speed layer
 
