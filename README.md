@@ -5,11 +5,11 @@
 
 This project has three main parts:
 
-1. Historical digital coins data (batch layer). Those data are downloaded from CoinGecko using Python (check scripts in back_end, api.py). Because of the unstable API, only data from 2020-11-12 to 2020-11-20 are downloaded. The data are transfered to s3 -> Hive -> Hbase manually.
+1. Historical digital coins data (batch layer). Those data are downloaded from CoinGecko using Python script (Supportive_Scripts/back_end/api.py). Because of the unstableness of the API, only data from 2020-11-12 to 2020-11-20 are downloaded. The data are transfered from s3 to Hive and Hbase manually.
 
-2. Realtime search (speed layer). These data are  retrieved from API in real time. Data will be saved in batch layer through kafka (topic: stephyang_coin_price)
+2. Realtime search (speed layer). Search historical exchange rates of two coins for the given date. These data are retrieved from API in real time and will be saved in batch layer through kafka (topic: stephyang_coin_price).
 
-3. Client Service (alpha version experiment). In this part, I create a client-oriented service that includes registration, login, check real-time quote price (this real time is different from #2 because it's real-time for now. "Real-time" in # 2 means realtime search for historical date), and deposit/withdraw functionalities.
+3. Client Service. In this part, I create a client-oriented component that provides service including registration, login, deposit/withdraw, and check real-time quote price (this real time is different from #2 as it's real-time for now. "Real-time" in # 2 means realtime search for a historical date).
 
 ## Demo Video
 
@@ -19,11 +19,17 @@ https://www.youtube.com/watch?v=Z6n0GYikEkA&ab_channel=StephanieYang
 ## Pages:
 
 1. Welcome.html: menu page
+![](readmepic/welcome.jpeg)
 2. historical.html: check historical change rate between two coins
+![](readmepic/hist.jpeg)
 3. one_day.html: fetch realtime data
+![](readmepic/realtime.jpeg)
 4. vault.html: check client's vault
+![](readmepic/login.jpeg)
 5. registratioin.html: new client register
+![](readmepic/reg.jpeg)
 6. trade.html: deposit or withdraw coins
+![](readmepic/trade.jpeg)
 
 
 ## File Structure
