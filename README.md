@@ -19,17 +19,17 @@ https://www.youtube.com/watch?v=Z6n0GYikEkA&ab_channel=StephanieYang
 ## Pages:
 
 1. Welcome.html: menu page
-![](readmepic/welcome.jpeg)
+![](readmepic/welcome.jpg)
 2. historical.html: check historical change rate between two coins
 ![](readmepic/hist.jpeg)
 3. one_day.html: fetch realtime data
-![](readmepic/realtime.jpeg)
+![](readmepic/realtime.jpg)
 4. vault.html: check client's vault
-![](readmepic/login.jpeg)
+![](readmepic/login.jpg)
 5. registratioin.html: new client register
-![](readmepic/reg.jpeg)
+![](readmepic/reg.jpg)
 6. trade.html: deposit or withdraw coins
-![](readmepic/trade.jpeg)
+![](readmepic/trade.jpg)
 
 
 ## File Structure
