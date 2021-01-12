@@ -1,8 +1,8 @@
-# Final Project
+# Gringotts Digital Currency Exchange Center
 
-## Link
+## Link (expired)
 
-http://ec2-3-15-219-66.us-east-2.compute.amazonaws.com:3233/welcome.html?
+http://ec2-3-15-219-66.us-east-2.compute.amazonaws.com:3233/welcome.html
 
 ## Introduction
 
